@@ -85,12 +85,16 @@ export class DashboardComponent implements OnInit {
 
      class Octopus {
        constructor (readonly name: string) {}
+       info: string;
+       printInfo = (msg: string) => {this.info = msg}
      }
 
      let myOctopus = new Octopus('myOctopus');
+     let NewOctopus = new Octopus('NewOctopus');
      // Cannot assign to 'name' because it is a read-only property.
      // myOctopus.name = 'new name';
-     console.log(myOctopus.name);
+     console.log(myOctopus);
+
 
   }
 }
